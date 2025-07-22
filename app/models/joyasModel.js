@@ -1,11 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose = require ('mongoose')
 
-const joyasSchemas = mongoose.Schema({
+const joyasSchema = mongoose.Schema({
     nombre:{
         type:String,
         required:true,
-        length:50,
-    
+        length:50,        
     },
     descripcion:{
         type:String,
@@ -20,11 +19,11 @@ const joyasSchemas = mongoose.Schema({
         type:Number,
         required:true
     },
-    stok:{
+    stock:{
         type:Number,
         default:10
     }
 })
 
-const joyasModel = mongoose.model('joyas',joyasSchemas)
+const joyasModel = mongoose.model('joyas',joyasSchema)
 module.exports = joyasModel
